@@ -1,0 +1,17 @@
+name: ly_vanny_e20221647
+services:
+  admin:
+    build:
+      context: ./admin
+      dockerfile: dockerfile
+    container_name: admin_e20221647
+    ports:
+      - "8141:80"
+
+  client:
+    build:
+      context: ./client
+      dockerfile: dockerfile
+    container_name: client_e20221647
+    ports:
+      - "8142:80"
